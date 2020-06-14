@@ -1,17 +1,17 @@
 #задание 2: Вывести всех студентов с одного курса и одной специальности.
-SELECT * FROM студенты.students where Курс = '1' And Название_специальности = 'менеджмент';
+SELECT * FROM студенты.students where Course = '1' And Name_of_specialty = 'менеджмент';
 
 #задание 3: Вывести всех девочек, учащихся на “3” курсе.
-SELECT * FROM студенты.students where Курс = '3' And Пол = 'female';
+SELECT * FROM студенты.students where Course = '3' And Gender = 'female';
 
 #задание 4: Вывести количество студентов каждого курса, результат сгруппировать по специальности.
-SELECT count(Имя_студента), Название_специальности from студенты.students group by Название_специальности ;
+SELECT count(Student_name), Name_of_specialty from студенты.students group by Name_of_specialty ;
 
 #задание 5: Вывести три самых популярных мужских имен среди студентов и посчитать сколько раз они встречаются.
-SELECT Имя_студента, count(Имя_студента) from студенты.students where Пол ='male' group by Имя_студента order by count(Имя_студента) desc limit 3;
+SELECT Student_name, count(Student_name) from студенты.students where Gender ='male' group by Student_name order by count(Student_name) desc limit 3;
 
 #задание 7: Вывести троих самых старших студентов.
-SELECT Имя_студента, (year(current_date)-year(Дата_рождения)) from студенты.students order by(Дата_рождения) limit 3;
+SELECT Student_name, Age(year(current_date)-year(Date_of_Birth)) from студенты.students order by(Date_of_Birth) limit 3;
 
 #задание 8: Посчитать средний возраст студентов, посещающих математику.
-SELECT Название_дисциплины, avg(Дата_рождения) from студенты.students where Название_дисциплины ='Математика' ;
+SELECT Name_of_specialty, avg(Date_of_Birth) from студенты.students where Name_of_specialty ='Математика' ;
