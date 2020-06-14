@@ -11,7 +11,7 @@ SELECT count(Student_name), Name_of_specialty from студенты.students gro
 SELECT Student_name, count(Student_name) from студенты.students where Gender ='male' group by Student_name order by count(Student_name) desc limit 3;
 
 #задание 7: Вывести троих самых старших студентов.
-SELECT Student_name, Age(year(current_date)-year(Date_of_Birth)) from студенты.students order by(Date_of_Birth) limit 3;
+SELECT Student_name, (year(current_date)-year(Date_of_Birth)) from студенты.students order by(Date_of_Birth) limit 3;
 
 #задание 8: Посчитать средний возраст студентов, посещающих математику.
 SELECT Name_of_specialty, avg(Date_of_Birth) from студенты.students where Name_of_specialty ='Математика' ;
