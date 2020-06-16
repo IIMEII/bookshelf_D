@@ -1,5 +1,5 @@
 #задание 2: Вывести всех студентов с одного курса и одной специальности.
-SELECT * FROM студенты.students where Course = '1' And Name_of_specialty = 'менеджмент';
+SELECT * FROM студенты.students where Сourse = '1' And Name_of_specialty = 'менеджмент';
 
 #задание 3: Вывести всех девочек, учащихся на “3” курсе.
 SELECT * FROM студенты.students where Course = '3' And Gender = 'female';
