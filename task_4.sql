@@ -5,7 +5,8 @@ SELECT * FROM студенты.students where Сourse = '1' And Name_of_specialt
 SELECT * FROM студенты.students where Сourse = '3' And Gender = 'female';
 
 #задание 4: Вывести количество студентов каждого курса, результат сгруппировать по специальности.!!
-SELECT Сourse, count(Name_of_specialty) FROM студенты.students where Name_of_specialty='Менеджмент' group by Сourse order by Сourse ;
+SELECT Сourse, count(Name_of_specialty) as менеджмент
+ FROM студенты.students where Name_of_specialty='Менеджмент' group by Сourse order by Сourse ;
 
 #задание 5: Вывести три самых популярных мужских имен среди студентов и посчитать сколько раз они встречаются.
 SELECT Student_name, count(Student_name) from студенты.students where Gender ='male' group by Student_name order by count(Student_name) desc limit 3;
