@@ -18,4 +18,4 @@ SELECT Сourse, count(Student_name) FROM студенты.students where  Discip
 SELECT Student_name, (year(current_date)-year(Date_of_Birth)) from студенты.students order by(Date_of_Birth) limit 3;
 
 #задание 8: Посчитать средний возраст студентов, посещающих математику.
-SELECT round(avg (year(current_date)-(Date_of_Birth)),1) from студенты.students;
+SELECT round(avg (year(current_date)-(Date_of_Birth)),1) as возраст from студенты.students where Discipline_name='Математика';
