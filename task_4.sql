@@ -12,7 +12,7 @@ SELECT Student_name, count(Student_name) from студенты.students where Ge
 
 #задание 6:Посчитать сколько студентов проходят практику на каждом из курсов, результат сгруппировать по курсу.
 SELECT Сourse, count(Student_name) FROM студенты.students where  Discipline_name='Практика' group by(Сourse);
-"проверочный запрос  SELECT count(Discipline_name) FROM студенты.students where Discipline_name='Практика';   "
+"проверочный запрос  SELECT count(Discipline_name) FROM студенты.students where Discipline_name='Практика'; "
 
 #задание 7: Вывести троих самых старших студентов.
 SELECT Student_name, (year(current_date)-year(Date_of_Birth)) from студенты.students order by(Date_of_Birth) limit 3;
